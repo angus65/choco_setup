@@ -12,12 +12,7 @@ SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 
 
 call RefreshEnv
-
-REM PVM Requirement:
-echo. > %DIR%sqlxml.msi.log
-msiexec.exe /i sqlxml.msi /QN /L*V %DIR%sqlxml.msi.log
-
-
+ 
 choco install --execution-timeout=10800 -y %DIR%packages.config
 
 echo.
